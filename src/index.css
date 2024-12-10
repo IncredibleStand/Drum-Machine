@@ -1,0 +1,114 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  border-size: border-box;
+}
+#root
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  padding: 50px;
+}
+body
+{
+  background-color: grey;
+}
+#drum-machine 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 477px;
+  margin-top: 100px;
+  outline: 5px darkcyan solid;
+  border-radius: 7px;
+  background-color: dimgrey; /* Dark background color for contrast */
+}
+
+/* Display area for the current sound name */
+#display 
+{
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: -7px 7px 5px grey;
+  background-color: darkgrey; /* Light grey background */
+  color: black;
+}
+
+/* Styling for the row of drum pads */
+.row 
+{
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 17px;
+}
+
+/* Individual drum pad styling */
+.drum-pad 
+{
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  outline: 1px solid lightgrey;
+  border-radius: 5px;
+  background-color: grey;
+  font-weight: bold;
+  font-family: sans-serif, cursive, Arial;
+  color: black;
+  border: none;
+  cursor: pointer;
+  box-shadow: -5px 5px 5px grey;
+}
+
+.drum-pad:active 
+{
+  background-color: darkcyan; /* Even darker blue when clicked */
+}
+
+/* Button for toggling pad banks */
+button 
+{
+  background-color: #2b8786; /* Warning button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: -5px 5px 5px grey;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect for the toggle button */
+button:hover 
+{
+  background-color: darkcyan;
+}
+
+/* Accessibility improvement for screen readers */
+.clip 
+{
+  display: none; /* Hide the <audio> element from view */
+}
+@media (max-width: 600px) 
+{
+  .drum-pad {
+    width: 70px;
+    height: 80px;
+    font-size: 20px;
+  }
+}
